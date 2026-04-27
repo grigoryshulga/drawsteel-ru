@@ -55,9 +55,9 @@
   margin-bottom: 0.6em;
 }
 
-/* ---- Book feel: standard content width ---- */
+/* ---- Book feel: wider content area ---- */
 .md-main__inner {
-  max-width: 50rem;
+  max-width: 65rem;
 }
 
 .md-content__inner {
@@ -80,11 +80,22 @@
 .md-typeset table:not([class]) th {
   color: white;
   font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
 }
 
 .md-typeset table:not([class]) td {
   border-bottom: 1px solid #e0e0e0;
-  padding: 0.4rem 0.6rem;
+  padding: 0.35rem 0.6rem;
+}
+
+/* Alternating row colors */
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background: rgba(134, 109, 75, 0.04);
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(odd) {
+  background: #fff;
 }
 
 /* ---- Admonitions — ability cards and callouts ---- */
@@ -192,6 +203,14 @@
 
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
   border-bottom-color: #424242;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background: rgba(166, 139, 100, 0.06);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:nth-child(odd) {
+  background: transparent;
 }
 
 [data-md-color-scheme="slate"] .md-typeset blockquote:not(.admonition):not(details) {
