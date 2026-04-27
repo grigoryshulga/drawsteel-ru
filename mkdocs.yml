@@ -44,6 +44,7 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 4
+  - nl2br
   - tables
   - footnotes
   - attr_list
