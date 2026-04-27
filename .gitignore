@@ -1,0 +1,25 @@
+# MkDocs build output
+site/
+.mkdocs_docs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+venv/
+env/
+.venv/
+
+# Obsidian workspace (personal state, not project content)
+.obsidian/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+desktop.ini
+
+# IDE
+.vscode/
+.idea/

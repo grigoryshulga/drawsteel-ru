@@ -1,0 +1,62 @@
+site_name: Draw Steel!
+site_description: Русский перевод правил НРИ Draw Steel!
+site_url: https://draw-steel-rus.github.io/
+
+docs_dir: .mkdocs_docs
+
+theme:
+  name: material
+  language: ru
+
+  palette:
+    - scheme: default
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Переключить на тёмную тему
+    - scheme: slate
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.path
+    - navigation.top
+    - navigation.prune
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search:
+      lang: ru
+  - callouts
+  - awesome-pages
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - tables
+  - footnotes
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.caret
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js

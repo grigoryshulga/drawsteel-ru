@@ -1,0 +1,199 @@
+/* ===== Draw Steel! RPG — Book Style ===== */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root {
+  --md-text-font: 'EB Garamond';
+  --ds-accent: #866D4B;
+  --ds-accent-light: #A68B64;
+  --ds-accent-dark: #6B563A;
+  --ds-accent-muted: #C4B19A;
+  --ds-steel: #546e7a;
+}
+
+/* ---- Typography ---- */
+.md-typeset {
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.md-typeset h1 {
+  color: var(--ds-accent-dark);
+  border-bottom: 2px solid var(--ds-accent-muted);
+  padding-bottom: 0.25rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.md-typeset h2 {
+  color: var(--ds-accent-dark);
+  border-left: 3px solid var(--ds-accent-muted);
+  padding-left: 0.6rem;
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.md-typeset h3 {
+  color: var(--ds-accent);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.md-typeset h4 {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Paragraph spacing — tighter, book-like */
+.md-typeset p {
+  margin-bottom: 0.6em;
+}
+
+.md-typeset ul,
+.md-typeset ol {
+  margin-bottom: 0.6em;
+}
+
+/* ---- Book feel: standard content width ---- */
+.md-main__inner {
+  max-width: 50rem;
+}
+
+.md-content__inner {
+  padding: 1.2rem 1.8rem;
+}
+
+/* ---- Tables — ability cards ---- */
+.md-typeset table:not([class]) {
+  border: 2px solid var(--ds-accent);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 0.82rem;
+}
+
+.md-typeset table:not([class]) thead {
+  background: var(--ds-accent);
+}
+
+.md-typeset table:not([class]) th {
+  color: white;
+  font-weight: 700;
+}
+
+.md-typeset table:not([class]) td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.4rem 0.6rem;
+}
+
+/* ---- Admonitions — ability cards and callouts ---- */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 0.85rem;
+}
+
+.md-typeset .admonition.example,
+.md-typeset details.example {
+  border-color: var(--ds-accent);
+}
+
+.md-typeset .admonition.example > .admonition-title,
+.md-typeset details.example > .admonition-title {
+  background: rgba(134, 109, 75, 0.08);
+  color: var(--ds-accent-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-color: var(--ds-steel);
+}
+
+.md-typeset .admonition.note > .admonition-title,
+.md-typeset details.note > .admonition-title {
+  background: rgba(84, 110, 122, 0.08);
+  color: var(--ds-steel);
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: var(--ds-accent-light);
+}
+
+.md-typeset .admonition.warning > .admonition-title,
+.md-typeset details.warning > .admonition-title {
+  background: rgba(166, 139, 100, 0.08);
+  color: var(--ds-accent-dark);
+}
+
+/* ---- Sidebar navigation ---- */
+
+/* Root-level sections: larger, bolder — like chapter titles */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ds-accent-dark);
+  margin-top: 0.5em;
+}
+
+/* Sub-items: smaller, regular weight */
+.md-nav--primary .md-nav__list .md-nav__list .md-nav__link {
+  font-weight: 400;
+  font-size: 0.82rem;
+}
+
+/* Active link */
+.md-nav__link--active {
+  color: var(--ds-accent) !important;
+  font-weight: 700;
+}
+
+/* Collapsed sections: show expand arrow clearly */
+.md-nav__item--collapsed > .md-nav__link::after {
+  color: var(--ds-accent-muted);
+}
+
+/* ---- Horizontal rules — ornamental ---- */
+.md-typeset hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--ds-accent-muted) 20%,
+    var(--ds-accent-muted) 80%,
+    transparent
+  );
+  margin: 1.5em 0;
+}
+
+/* ---- Blockquotes — in-book asides ---- */
+.md-typeset blockquote:not(.admonition):not(details) {
+  border-left: 3px solid var(--ds-accent-muted);
+  padding-left: 0.8rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* ---- Dark mode ---- */
+[data-md-color-scheme="slate"] {
+  --ds-accent: #A68B64;
+  --ds-accent-light: #C4B19A;
+  --ds-accent-dark: #866D4B;
+  --ds-accent-muted: #6B563A;
+  --ds-steel: #90a4ae;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) thead {
+  background: var(--ds-accent-dark);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
+  border-bottom-color: #424242;
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote:not(.admonition):not(details) {
+  color: #aaa;
+}
