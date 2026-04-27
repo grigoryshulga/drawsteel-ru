@@ -8,6 +8,18 @@
   --ds-accent-dark: #6B563A;
   --ds-accent-muted: #C4B19A;
   --ds-steel: #546e7a;
+  --ds-ivory: #FAF8F5;
+}
+
+/* ---- Background ---- */
+.md-main,
+.md-content {
+  background-color: var(--ds-ivory);
+}
+
+[data-md-color-scheme="slate"] .md-main,
+[data-md-color-scheme="slate"] .md-content {
+  background-color: unset;
 }
 
 /* ---- Typography ---- */
